@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -9,10 +10,10 @@
   <link rel="stylesheet" href="/styles/mainPage.css" />
   <link rel="stylesheet" href="../styles/sidebar.css">
   <link rel="stylesheet" href="../styles/responsividade.css">
-  <title>Comandos</title>
+  <title>Links de Apoio</title>
 </head>
 <body>
-  <header class="main-header" id="main-header" >
+     <header class="main-header" id="main-header" >
     <button class="hamburger-menu">
         <i class="fa-solid fa-bars" ></i>
     </button>
@@ -20,54 +21,49 @@
 <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h1>Comandos</h1>
-                <p>Códigos</p>
+                <h1>Links</h1>
+                <p>Links de apoio</p>
                 <hr>
             </div>
             <nav class="menu">
-                <button class="menu-button active" data-target="#content-cache">Cache <i class="fa-solid fa-angle-right"></i></button>
-                <button class="menu-button" data-target="#content-codigos">Códigos <i class="fa-solid fa-angle-right"></i></button>
+                <button class="menu-button active" data-target="#content-links-uteis">
+                  Links Uteis <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <button class="menu-button" data-target="#content-editar-site">
+                  Edição para sites <i class="fa-solid fa-angle-right"></i>
+                </button>
             </nav>
             <div class="home">
               <hr>
-              <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</i></a>
+              <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
             </div>
         </aside>
         <main class="main-content">
-            <div id="content-cache" class="code-content active">
-              <h2>Cache</h2>
-                <!-- <input type="text" value="?cache=clear" readonly> -->
+            <div id="content-links-uteis" class="code-content active">
+              <h2>Links Uteis</h2>
                   <div class="message-display">
-                    <span class="tagName">Limpar cache</span><br>
-                    <p>?cache=clear</p>
+                    <span class="tagName">Termos de Uso</span><br> 
+                    <code><a href="https://2task.com.br/novoapp/Manuais/guiasC2TI.xhtml?faces-redirect=true&includeViewParams=true&prm=TRmxgyUcIaTSEehmNm32NQ==" style="color: #E4E4E4;">Termos de Uso C2TI</a></code><br><br>
+                  </div>
+                  <div class="message-display">
+                    <span class="tagName">Configurar E-mail - Umbler</span><br> 
+                    <code><a href="https://help.umbler.com/hc/pt-br/articles/204936355-Acessando-e-configurando-os-e-mails-manualmente" style="color: #E4E4E4;">Configurar E-mail</a></code><br><br>
+                  </div>
+                  <div class="message-display">
+                    <span class="tagName">Apontamento DNS</span><br> 
+                    <code><a href="https://sibnext.com/blog/Publicacao.aspx?id=454773" style="color: #E4E4E4;">Apontamento DNS</a></code><br><br>
                   </div>
             </div>
 
-            <div id="content-codigos" class="code-content">
-              <h2>Códigos</h2>
+            <div id="content-editar-site" class="code-content">
+              <h2>Edição para sites</h2>
                 <!-- <input type="text" value="?cache=clear" readonly> -->
                   <div class="message-display">
-                    <span class="tagName">Alterar link do Whatsapp</span><br>
-                    <p>$(".btnZap > span").attr("onclick","window.open('https://api.whatsapp.com/send?phone=551199999999'), _blank");</p>
+                    <span class="tagName">Swiper</span><br> 
+                    <code><a href="https://swiperjs.com/demos" style="color: #E4E4E4;">Swiper</a></code><br><br>
                   </div>
-                  <div class="message-display">
-                    <span class="tagName">Adicionar elemento no head</span><br>
-                    <p>$("head").prepend(`<br><br>`);</p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Adicionar elemento no body</span><br>
-                    <p>$(".body").prepend(`<br><br>`);</p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Editar mapa</span><br>
-                    <p>https://c2tiapps.com/ia/MapaBrasil.ashx?estados=SP,ES</p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Editar galeria de fotos</span><br>
-                    <p>$("#containerEditavel-548802 .container_conteudo_informativo .btgrid .row-1 div:nth-child(...) .content .fotos_noticia_img_t").attr("src", "...");</p>
-                  </div>
-
             </div>
+
         </main>
     </div>
 
@@ -75,7 +71,7 @@
 
     <script>
       $(document).ready(function(){
-    $('.menu-button').on('click', function(){
+        $('.menu-button').on('click', function(){
         $('.menu-button').removeClass('active');
 
         $(this).addClass('active');
@@ -101,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
+
     </script>
 </body>
 </html>

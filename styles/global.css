@@ -1,9 +1,41 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Reset */
+/* ====== RESET ====== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Poppins", sans-serif;
+}
+
+/* ====== Variáveis ====== */
+:root {
+  --cor-background: #030F0F;
+  --cor-segundaria: #03624C;
+  --cor-terceira: #79b5a08a;
+  --cor-texto: #E4E4E4;
+  --borda: 1px solid #02df836f;
+}
+
+
+/* Largura/altura da barra */
+::-webkit-scrollbar {
+  width: 5px;          /* para barra vertical */
+}
+
+/* Trilha (fundo da barra) */
+::-webkit-scrollbar-track {
+  background: var(--cor-background);      /* cor de fundo */
+  border-radius: 3px;
+}
+
+/* Pega/Thumb (parte que se move) */
+::-webkit-scrollbar-thumb {
+  background: var(--cor-segundaria);
+  border-radius: 3px;
+}
+
+/* Ao passar o mouse */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--cor-terceira);
 }

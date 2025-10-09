@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="/styles/global.css">
-  <link rel="stylesheet" href="/styles/mensa.css">
+  <link rel="stylesheet" href="../styles/global.css">
+  <link rel="stylesheet" href="/styles/mainPage.css" />
+  <link rel="stylesheet" href="../styles/sidebar.css">
+  <link rel="stylesheet" href="../styles/responsividade.css">
   <title>Mensagens</title>
 </head>
 <body>
@@ -39,63 +41,89 @@
 
               <h2>Cancelamento e Reembolso</h2>
                 <!-- <input type="text" value="?cache=clear" readonly> -->
-                  <p class="message-display">
+                  <div class="message-display">
                     <span class="tagName">Cancelamento</span><br>
-                    Olá! Tudo bem?<br>Conforme solicitado, o cancelamento foi realizado com sucesso. <br>Se precisar de qualquer suporte adicional ou decidir retomar nossos serviços futuramente, estaremos sempre à disposição.
-                  </p>
-                  <p class="message-display">
+                    <p>
+                      Olá! Tudo bem?<br><br>Conforme solicitado, o cancelamento foi realizado com sucesso.<br><br>Se precisar de qualquer suporte adicional ou decidir retomar nossos serviços futuramente, estaremos sempre à disposição.
+                    </p>
+                  </div>
+                  <div class="message-display">
                     <span class="tagName">Entender o motivo</span><br>
-                    Olá, tudo bem?<br>Recebemos sua solicitação de cancelamento e já estamos processando o pedido.<br>Caso tenha sido por algum problema ou insatisfação, gostaríamos de entender melhor para que possamos melhorar nossos serviços.
-                  </p>
-                  <p class="message-display">
+                    <p>
+                      Olá, tudo bem?<br><br>Recebemos sua solicitação de cancelamento e já estamos processando o pedido.<br><br>Caso tenha sido por algum problema ou insatisfação, gostaríamos de entender melhor para que possamos melhorar nossos serviços.
+                    </p>
+                  </div>
+                  <div class="message-display">
                     <span class="tagName">Cancelamento e estorno realizados</span><br>
-                    Olá! Tudo bem?<br>
+                    <p>
+                      Olá! Tudo bem?<br><br>
                     Conforme solicitado, o cancelamento e o estorno foram realizados com sucesso.<br>Em anexo, encaminhamos o comprovante de reembolso para sua conferência.<br><br>Gostaríamos apenas de reforçar que, como o seu domínio já foi registrado, a taxa de registro não é reembolsável. Essa condição está prevista em nossos Termos de Uso, enviados automaticamente ao seu e-mail no momento da criação do site.<br><br>
                     O trecho específico dos termos diz o seguinte:<br>"Será feito o reembolso de todos os valores eventualmente pagos pelo Usuário, com exceção da taxa de registro de domínio, por não se tratar de um serviço cancelável pelos órgãos registradores."<br><br>
                     Você pode consultar os Termos de Uso completos neste link: <br>
                     👉 <code><a href="https://2task.com.br/novoapp/Manuais/guiasC2TI.xhtml?faces-redirect=true&includeViewParams=true&prm=TRmxgyUcIaTSEehmNm32NQ==" style="color: #E4E4E4;">Termos de Uso</a></code><br><br>
                     Se precisar de qualquer suporte adicional ou decidir retomar nossos serviços futuramente, estaremos sempre à disposição.
-                  </p>
+                    </p>
+                  </div>
 
-                  <p class="message-display">
+                  <div class="message-display">
                     <span class="tagName">Envio das informações de cancelamento e estorno</span><br>
-                    Olá, tudo bom?<br>
+                    <p>
+                      Olá, tudo bom?<br>
                     Esse cliente deseja cancelar sua contratação.<br><br>
                     - Domínio: <br>
                     - O que é para ser feito: <br>
                     - Motivo do cancelamento: <br>
                     - Se tiver reembolso:
-                  </p>
+                    </p>
+                  </div>
             </div>
 
             <div id="content-araea-do-cliente" class="code-content">
               <h2>Área do Cliente</h2>
                 <!-- <input type="text" value="?cache=clear" readonly> -->
-                  <p class="message-display">
+                  <div class="message-display">
                     <span class="tagName">Pré envio</span><br>
-                    Estarei te encaminhando os dados de acesso à nossa área do cliente, assim você poderá realizar a alteração dos e-mails diretamente por lá.
-                  </p>
-                  <p class="message-display">
+                    <p>
+                      Estarei te encaminhando os dados de acesso à nossa área do cliente, assim você poderá realizar a alteração dos e-mails diretamente por lá.
+                    </p>
+                  </div>
+                  <div class="message-display">
                     <span class="tagName">Pós envio</span><br>
-                     Os dados de acesso à área do cliente serão enviados para o e-mail que está cadastrado em sua contratação. <br>(email_do_cliente)
-                  </p>
+                     <p>
+                      Os dados de acesso à área do cliente serão enviados para o e-mail que está cadastrado em sua contratação. <br>(email_do_cliente)
+                     </p>
+                  </div>
             </div>
 
             <div id="content-outro" class="code-content">
               <h2>Outros</h2>
-                <p class="message-display">
+                <div class="message-display">
                   <span class="tagName">Problema resolvido (Cache)</span><br>
-                  O problema que estava causando a tela em branco no seu site já foi resolvido.<br>
+                  <p>
+                    O problema que estava causando a tela em branco no seu site já foi resolvido.<br>
                   Pedimos que atualize a página (pode usar Ctrl + F5) e verifique se está tudo funcionando corretamente agora.
-                </p>
-                <p class="message-display">
+                  </p>
+                </div>
+                <div class="message-display">
                   <span class="tagName">Link de reativação</span><br>
-                  Segue link de reativação - :
-                </p>
-                <p class="message-display">
+                  <p>Segue link de reativação - :</p>
+                </div>
+                <div class="message-display">
                   <span class="tagName">Link de pagamento</span><br>
-                 Segue link de pagamento, referente ao Registro de domínio:
-                </p
+                 <p>Segue link de pagamento, referente ao Registro de domínio:</p>
+                </div>
+                <div class="message-display">
+                  <span class="tagName">Apontamento</span><br>
+                 <p>
+                  Caso preferir podemos realizar o apontamento para o senhor, para isso vamos precisar dos dados de acesso da  plataforma que o domínio foi contratado.<br>
+                  No caso seria o usuário e a senha
+                </p>
+                </div>
+                <div class="message-display">
+                  <span class="tagName">Usar formato de imagem</span><br>
+                 <p>Em relação as imagens você pode carregá-las no formato .webp
+                 </p>
+                </div>
             </div>
         </main>
     </div>

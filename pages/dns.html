@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,12 +8,13 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="../styles/global.css">
   <link rel="stylesheet" href="/styles/mainPage.css" />
+  <link rel="stylesheet" href="../styles/asst.css">
   <link rel="stylesheet" href="../styles/sidebar.css">
   <link rel="stylesheet" href="../styles/responsividade.css">
-  <title>Comandos</title>
+  <title>Zona DNS</title>
 </head>
 <body>
-  <header class="main-header" id="main-header" >
+     <header class="main-header" id="main-header" >
     <button class="hamburger-menu">
         <i class="fa-solid fa-bars" ></i>
     </button>
@@ -20,54 +22,52 @@
 <div class="container">
         <aside class="sidebar">
             <div class="sidebar-header">
-                <h1>Comandos</h1>
-                <p>Códigos</p>
+                <h1>DNS</h1>
                 <hr>
             </div>
             <nav class="menu">
-                <button class="menu-button active" data-target="#content-cache">Cache <i class="fa-solid fa-angle-right"></i></button>
-                <button class="menu-button" data-target="#content-codigos">Códigos <i class="fa-solid fa-angle-right"></i></button>
+                <button class="menu-button active" data-target="#content-dns">
+                  DNS por servidor <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <button class="menu-button" data-target="#content-ip">
+                  DNS por IP <i class="fa-solid fa-angle-right"></i>
+                </button>
+
             </nav>
             <div class="home">
               <hr>
-              <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</i></a>
+              <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
             </div>
         </aside>
         <main class="main-content">
-            <div id="content-cache" class="code-content active">
-              <h2>Cache</h2>
+            <div id="content-dns" class="code-content active">
+
+              <h2>Apontamento por servidor</h2>
                 <!-- <input type="text" value="?cache=clear" readonly> -->
                   <div class="message-display">
-                    <span class="tagName">Limpar cache</span><br>
-                    <p>?cache=clear</p>
+                    <span class="tagName">DNS Servidor</span><br>
+                    <p>
+                      ns1.sibnext1.com.br<br>ns2.sibnext1.com.br
+                    </p>
+                    <button class="copyBtn" data-text='ns1.sibnext1.com.br' style="margin-top: 15px;"> Copiar DNS </button>
+
                   </div>
             </div>
 
-            <div id="content-codigos" class="code-content">
-              <h2>Códigos</h2>
+            <div id="content-ip" class="code-content">
+              <h2>DNS por IP</h2>
                 <!-- <input type="text" value="?cache=clear" readonly> -->
-                  <div class="message-display">
-                    <span class="tagName">Alterar link do Whatsapp</span><br>
-                    <p>$(".btnZap > span").attr("onclick","window.open('https://api.whatsapp.com/send?phone=551199999999'), _blank");</p>
+                 <div class="message-display">
+                    <span class="tagName">DNS IP</span><br>
+                    <p>
+                      162.214.98.119
+                    </p>
+                    <button class="copyBtn" data-text='162.214.98.119' style="margin-top: 15px;"> Copiar DNS </button>
                   </div>
-                  <div class="message-display">
-                    <span class="tagName">Adicionar elemento no head</span><br>
-                    <p>$("head").prepend(`<br><br>`);</p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Adicionar elemento no body</span><br>
-                    <p>$(".body").prepend(`<br><br>`);</p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Editar mapa</span><br>
-                    <p>https://c2tiapps.com/ia/MapaBrasil.ashx?estados=SP,ES</p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Editar galeria de fotos</span><br>
-                    <p>$("#containerEditavel-548802 .container_conteudo_informativo .btgrid .row-1 div:nth-child(...) .content .fotos_noticia_img_t").attr("src", "...");</p>
-                  </div>
-
             </div>
+
+            <!-- Toast -->
+<div id="toast" class="toast">Texto copiado!</div>
         </main>
     </div>
 
@@ -101,6 +101,31 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 })
+
+/* copiar */
+      const botoes = document.querySelectorAll(".copyBtn");
+const toast = document.getElementById('toast');
+
+  function mostrarToast(mensagem) {
+    toast.textContent = mensagem;
+    toast.classList.add('show');
+
+    // Esconde após 2,5s
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const texto = botao.dataset.text;
+      navigator.clipboard.writeText(texto)
+        .then(() => mostrarToast('DNS copiado!'))
+        .catch(err => console.error('Erro ao copiar:', err));
+    });
+  });
+
+
     </script>
+
+    
 </body>
 </html>

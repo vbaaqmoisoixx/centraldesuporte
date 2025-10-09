@@ -1,152 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
-    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
 
-  <!-- Global & Page Styles -->
-  <link rel="stylesheet" href="styles/global.css" />
-  <link rel="stylesheet" href="styles/index.css" />
+    <!-- Global & Page Styles -->
+    <link rel="stylesheet" href="styles/global.css" />
+    <link rel="stylesheet" href="styles/index.css" />
 
-  <title>Document</title>
-</head>
-<body>
-  <main id="main">
-    <!-- Hero Section -->
-    <div class="image">
-      <h1>
-        O canivete suíço do seu suporte. <br>
-        <span class="typing-text"></span>
-      </h1>
-    </div>
-
-    <!-- Carousel -->
-    <div class="carousel-container">
-      <div class="carousel-track">
-        <!-- Slide 1 -->
-        <div class="carousel-slide">
-          <a href="/pages/mensagem.html" class="card">
-            <img src="./src/icons/msm-icon.png" alt="" class="imgIcon" />
-            <h3>Mensagens</h3>
-            <p>E-mail & Whatsapp</p>
-          </a>
-
-          <a href="/pages/comandos.html" class="card">
-            <img src="./src/icons/code-icon.png" alt="" class="imgIcon" />
-            <h3>Comandos</h3>
-            <p>Códigos</p>
-          </a>
-
-          <a href="/pages/tutoriais.html" class="card">
-            <img src="./src/icons/book-icon.png" alt="" class="imgIcon" />
-            <h3>Tutoriais</h3>
-            <p>Edição do site & Contratação</p>
-          </a>
-
-          <a href="/pages/links.html" class="card">
-            <img src="./src/icons/link-icon.png" alt="" class="imgIcon" />
-            <h3>Links Úteis</h3>
-            <p>Apoio</p>
-          </a>
-        </div>
-
-        <!-- Slide 2 -->
-        <div class="carousel-slide">
-          <a href="/pages/card5.html" class="card">
-            <img src="./src/icons/dns-icon.png" alt="" class="imgIcon" />
-            <h3>DNS</h3>
-            <p>Apontamento de domínios</p>
-          </a>
-        </div>
+    <title>Document</title>
+  </head>
+  <body>
+    <main id="main">
+      <!-- Hero Section -->
+      <div class="image">
+        <h1>
+          O canivete suíço do seu suporte. <br />
+          <span class="typing-text"></span>
+        </h1>
       </div>
 
-      <!-- Navigation Buttons -->
-      <div class="btns">
-        <button class="btn prev">
-          <i class="fa-solid fa-chevron-left"></i>
-        </button>
-        <button class="btn next">
-          <i class="fa-solid fa-chevron-right"></i>
-        </button>
+      <!-- Carousel -->
+      <div class="carousel-container">
+        <div class="carousel-track">
+          <!-- Slide 1 -->
+          <div class="carousel-slide">
+            <a href="/pages/mensagem.html" class="card">
+              <img src="./src/icons/msm-icon.png" alt="" class="imgIcon" />
+              <h3>Mensagens</h3>
+              <p>E-mail & Whatsapp</p>
+            </a>
+
+            <a href="/pages/comandos.html" class="card">
+              <img src="./src/icons/code-icon.png" alt="" class="imgIcon" />
+              <h3>Comandos</h3>
+              <p>Códigos</p>
+            </a>
+
+            <a href="/pages/tutoriais.html" class="card">
+              <img src="./src/icons/book-icon.png" alt="" class="imgIcon" />
+              <h3>Tutoriais</h3>
+              <p>Edição do site & Contratação</p>
+            </a>
+
+            <a href="/pages/dns.html" class="card">
+              <img src="./src/icons/dns-icon.png" alt="" class="imgIcon" />
+              <h3>DNS</h3>
+              <p>Apontamento de domínios</p>
+            </a>
+          </div>
+
+          <!-- Slide 2 -->
+          <div class="carousel-slide">
+            <a href="/pages/links.html" class="card">
+              <img src="./src/icons/link-icon.png" alt="" class="imgIcon" />
+              <h3>Links Úteis</h3>
+              <p>Apoio</p>
+            </a>
+            <a href="/pages/assets.html" class="card">
+              <img src="./src/icons/assets-icon.png" alt="" class="imgIcon" />
+              <h3>Assets</h3>
+              <p>Assets para sites</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation Buttons -->
+        <div class="btns">
+          <button class="btn prev">
+            <i class="fa-solid fa-chevron-left"></i>
+          </button>
+          <button class="btn next">
+            <i class="fa-solid fa-chevron-right"></i>
+          </button>
+        </div>
       </div>
-    </div>
-  </main>
+    </main>
 
-  <script>
-    // Carousel Logic
-    const track = document.querySelector('.carousel-track');
-    const prevBtn = document.querySelector('.btn.prev');
-    const nextBtn = document.querySelector('.btn.next');
-    const slides = document.querySelectorAll('.carousel-slide');
+    <script src="scripts/index.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const typingTextElement = document.querySelector(".typing-text");
+        const words = [
+          "Mensagens.",
+          "Códigos.",
+          "Tutoriais.",
+          "Links Úteis.",
+          "DNS.",
+          "E muito mais!",
+        ];
 
-    let index = 0;
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
 
-    function updateCarousel() {
-      const slideWidth = slides[0].offsetWidth;
-      track.style.transform = `translateX(${-index * slideWidth}px)`;
-    }
+        function type() {
+          const currentWord = words[wordIndex];
+          const currentText = currentWord.substring(0, charIndex);
+          typingTextElement.textContent = currentText;
 
-    nextBtn.addEventListener('click', () => {
-      if (index < slides.length - 1) {
-        index++;
-        updateCarousel();
-      }
-    });
-
-    prevBtn.addEventListener('click', () => {
-      if (index > 0) {
-        index--;
-        updateCarousel();
-      }
-    });
-
-    // Typing Effect
-    document.addEventListener('DOMContentLoaded', function () {
-      const typingTextElement = document.querySelector('.typing-text');
-      const words = [
-        "Mensagens.",
-        "Códigos.",
-        "Tutoriais.",
-        "Links Úteis.",
-        "DNS.",
-        "E muito mais!"
-      ];
-
-      let wordIndex = 0;
-      let charIndex = 0;
-      let isDeleting = false;
-
-      function type() {
-        const currentWord = words[wordIndex];
-        const currentText = currentWord.substring(0, charIndex);
-        typingTextElement.textContent = currentText;
-
-        if (!isDeleting && charIndex < currentWord.length) {
-          charIndex++;
-          setTimeout(type, 150);
-        } else if (isDeleting && charIndex > 0) {
-          charIndex--;
-          setTimeout(type, 90);
-        } else {
-          isDeleting = !isDeleting;
-          if (!isDeleting) {
-            wordIndex = (wordIndex + 1) % words.length;
+          if (!isDeleting && charIndex < currentWord.length) {
+            charIndex++;
+            setTimeout(type, 150);
+          } else if (isDeleting && charIndex > 0) {
+            charIndex--;
+            setTimeout(type, 90);
+          } else {
+            isDeleting = !isDeleting;
+            if (!isDeleting) {
+              wordIndex = (wordIndex + 1) % words.length;
+            }
+            setTimeout(type, 1200);
           }
-          setTimeout(type, 1200);
         }
-      }
 
-      type();
-    });
-  </script>
-</body>
+        type();
+      });
+    </script>
+  </body>
 </html>

@@ -1,0 +1,36 @@
+@media (max-width: 768px) {
+  .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    z-index: 1000;
+    background-color: var(--background-color);
+    box-shadow: #30e0a52d 0px 0px 8px;
+    transform: translateX(-108%);
+  }
+
+  .sidebar.open {
+    transform: translateX(0);
+  }
+
+  .hamburger-menu {
+    display: block;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: var(--accent-color);
+    background-color: var(--border-color);
+  }
+
+  .main-header {
+    z-index: 1001;
+    padding: 10px 20px;
+  }
+
+  .imgTuto {
+    width: 100%;
+    height: auto;
+  }
+}

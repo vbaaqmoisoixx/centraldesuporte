@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="/styles/mainPage.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/asst.css" />
+    <link rel="stylesheet" href="../styles/responsividade.css">
+    <title>Code Assets</title>
+  </head>
+  <body>
+    <header class="main-header" id="main-header">
+      <button class="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>Code Assets</h1>
+          <hr />
+        </div>
+        <nav class="menu">
+          <button class="menu-button active" data-target="#content-dns">
+            Carrossel <i class="fa-solid fa-angle-right"></i>
+          </button>
+          <button class="menu-button" data-target="#content-ip">
+            DNS por IP <i class="fa-solid fa-angle-right"></i>
+          </button>
+        </nav>
+        <div class="home">
+          <hr />
+          <a class="voltar" href="../index.html"
+            ><i class="fa-solid fa-chevron-left"></i> Voltar</a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <div id="content-dns" class="code-content active">
+          <h2>Carrossel</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <section style="display: flex; gap: 35px; flex-wrap: wrap">
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/image.png" alt="" />
+              </div>
+              <p>Carrossel infinito</p>
+
+              <div class="copyBtns">
+                <button
+                  class="copyBtn"
+                  data-text='<section class="carousel">
+   <div class="fade"></div>
+   <div class="track" id="track">
+      <!-- Slides originais -->
+      <article class="card">
+         <img src="https://picsum.photos/id/1015/600/400" alt="Montanhas">
+         <div class="info">
+            <h3 class="title">Montanhas</h3>
+            <p class="desc">Natureza e aventura.</p>
+         </div>
+      </article>
+      <article class="card">
+         <img src="https://picsum.photos/id/1011/600/400" alt="Cidade">
+         <div class="info">
+            <h3 class="title">Cidade</h3>
+            <p class="desc">Luzes da metrópole.</p>
+         </div>
+      </article>
+      <article class="card">
+         <img src="https://picsum.photos/id/1016/600/400" alt="Praia">
+         <div class="info">
+            <h3 class="title">Praia</h3>
+            <p class="desc">Areia e mar azul.</p>
+         </div>
+      </article>
+      <article class="card">
+         <img src="https://picsum.photos/id/1003/600/400" alt="Floresta">
+         <div class="info">
+            <h3 class="title">Floresta</h3>
+            <p class="desc">Verde e tranquilidade.</p>
+         </div>
+      </article>
+   </div>
+</section>'
+                >
+                  Copiar HTML
+                </button>
+                <button class="copyBtn" data-text='#trabalheConosco {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+  margin-top: 10rem;
+  gap: 3rem;
+}
+.imgHomeOffice {
+  width: 58rem;
+  height: 30rem;
+  border-radius: 10px;
+  object-fit: cover;
+} /* .beneficios { padding: 0 30px; }*/
+.beneficios h1 {
+  font-weight: 900;
+  color: aliceblue;
+  font-size: 3rem;
+  margin-top: 0 !important;
+}
+.beneficios p {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+}
+.listaBenef {
+  list-style: none;
+  margin-top: 40px;
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.listaBenef li {
+  display: inline-flex;
+  align-items: center; /*max-width: 350px;*/
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  padding: 25px 15px;
+  gap: 10px;
+  background-color: rgba(9, 133, 250, 0.059);
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+.listaBenef li:hover {
+  border: 1px solid #090b1bff;
+}
+'>Copiar CSS</button>
+              </div>
+            </div>
+
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/image.png" alt="" />
+              </div>
+              <p>Carrossel infinito</p>
+
+              <div class="copyBtns">
+                <button class="copyBtn">Copiar HTML</button>
+                <button class="copyBtn">Copiar CSS</button>
+              </div>
+            </div>
+
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/image.png" alt="" />
+              </div>
+              <p>Carrossel infinito</p>
+
+              <div class="copyBtns">
+                <button class="copyBtn">Copiar HTML</button>
+                <button class="copyBtn">Copiar CSS</button>
+              </div>
+            </div>
+
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/image.png" alt="" />
+              </div>
+              <p>Carrossel infinito</p>
+
+              <div class="copyBtns">
+                <button class="copyBtn co">Copiar HTML</button>
+                <button class="copyBtn">Copiar CSS</button>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <div id="content-ip" class="code-content">
+          <h2>DNS por IP</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <div class="message-display">
+            <span class="tagName">DNS IP</span><br />
+            <p>162.214.98.119</p>
+          </div>
+        </div>
+
+        
+<!-- Toast -->
+<div id="toast" class="toast">Texto copiado!</div>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-button").on("click", function () {
+          $(".menu-button").removeClass("active");
+
+          $(this).addClass("active");
+
+          $(".code-content").removeClass("active");
+
+          var targetContent = $(this).data("target");
+
+          $(targetContent).addClass("active");
+        });
+      });
+
+      // Espera o DOM carregar
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerBtn = document.querySelector(".hamburger-menu");
+        const sidebar = document.querySelector(".sidebar");
+
+        if (hamburgerBtn && sidebar) {
+          // Adiciona um evento de clique ao botão
+          hamburgerBtn.addEventListener("click", () => {
+            // Alterna a classe 'open' na barra lateral
+            sidebar.classList.toggle("open");
+          });
+        }
+      });
+
+      /* copiar */
+      const botoes = document.querySelectorAll(".copyBtn");
+const toast = document.getElementById('toast');
+
+  function mostrarToast(mensagem) {
+    toast.textContent = mensagem;
+    toast.classList.add('show');
+
+    // Esconde após 2,5s
+    setTimeout(() => toast.classList.remove('show'), 2500);
+  }
+
+  botoes.forEach(botao => {
+    botao.addEventListener('click', () => {
+      const texto = botao.dataset.text;
+      navigator.clipboard.writeText(texto)
+        .then(() => mostrarToast('Código copiado!'))
+        .catch(err => console.error('Erro ao copiar:', err));
+    });
+  });
+    </script>
+  </body>
+</html>
