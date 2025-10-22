@@ -1,178 +1,251 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="../styles/global.css">
-  <link rel="stylesheet" href="/styles/mainPage.css" />
-  <link rel="stylesheet" href="../styles/sidebar.css">
-  <link rel="stylesheet" href="../styles/responsividade.css">
-  <title>Mensagens</title>
-</head>
-<body>
-     <header class="main-header" id="main-header" >
-    <button class="hamburger-menu">
-        <i class="fa-solid fa-bars" ></i>
-    </button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="/styles/mainPage.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/responsividade.css" />
+    <title>Mensagens</title>
+  </head>
+  <body>
+    <header class="main-header" id="main-header">
+      <button class="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
     </header>
-<div class="container">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h1>Mensagens</h1>
-                <p>E-mail, Whatsapp</p>
-                <hr>
-            </div>
-            <nav class="menu">
-                <button class="menu-button active" data-target="#content-Cancelamento">Cancelamento <i class="fa-solid fa-angle-right"></i></button>
-                <button class="menu-button" data-target="#content-araea-do-cliente">Área do Cliente <i class="fa-solid fa-angle-right"></i></button>
-                <button class="menu-button" data-target="#content-outro">Outros <i class="fa-solid fa-angle-right"></i></button>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>Mensagens</h1>
+          <p>E-mail, Whatsapp</p>
+          <hr />
+        </div>
+        <nav class="menu">
+          <button
+            class="menu-button active"
+            data-target="#content-Cancelamento"
+          >
+            Cancelamento <i class="fa-solid fa-angle-right"></i>
+          </button>
+          <button class="menu-button" data-target="#content-araea-do-cliente">
+            Área do Cliente <i class="fa-solid fa-angle-right"></i>
+          </button>
+          <button class="menu-button" data-target="#content-outro">
+            Outros <i class="fa-solid fa-angle-right"></i>
+          </button>
 
-            </nav>
-            <div class="home">
-              <hr>
-              <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+          <div class="dropdown" style="border-top: 1px solid #02df8338; padding-top: 8px;">
+            <button class="dropbtn menu-button">
+              Acesso Rápido <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/pages/comandos.html">Comandos
+                <svg style="margin-left: 5px;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+              </a>
+              <a href="/pages/tutoriais.html">Tutoriais
+                <svg style="margin-left: 5px;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+              </a>
+              <a href="/pages/dns.html">Apontamento DNS
+                <svg style="margin-left: 5px;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+              </a>
+              <a href="/pages/links.html">Links
+                <svg style="margin-left: 5px;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+              </a>
+              <a href="/pages/assets.html">Assets
+                <svg style="margin-left: 5px;" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/> </svg>
+              </a>
             </div>
-        </aside>
-        <main class="main-content">
-            <div id="content-Cancelamento" class="code-content active">
+          </div>
+        </nav>
+        <div class="home">
+          <hr />
+          <a class="voltar" href="../index.html"
+            ><i class="fa-solid fa-chevron-left"></i> Voltar</a
+          >
+        </div>
+      </aside>
+      <main class="main-content">
+        <div id="content-Cancelamento" class="code-content active">
+          <h2>Cancelamento e Reembolso</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <div class="message-display">
+            <span class="tagName">Cancelamento</span><br />
+            <p>
+              Olá! Tudo bem?<br /><br />Conforme solicitado, o cancelamento foi
+              realizado com sucesso.<br /><br />Se precisar de qualquer suporte
+              adicional ou decidir retomar nossos serviços futuramente,
+              estaremos sempre à disposição.
+            </p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Entender o motivo</span><br />
+            <p>
+              Olá, tudo bem?<br /><br />Recebemos sua solicitação de
+              cancelamento e já estamos processando o pedido.<br /><br />Caso
+              tenha sido por algum problema ou insatisfação, gostaríamos de
+              entender melhor para que possamos melhorar nossos serviços.
+            </p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Cancelamento e estorno realizados</span><br />
+            <p>
+              Olá! Tudo bem?<br /><br />
+              Conforme solicitado, o cancelamento e o estorno foram realizados
+              com sucesso.<br />Em anexo, encaminhamos o comprovante de
+              reembolso para sua conferência.<br /><br />Gostaríamos apenas de
+              reforçar que, como o seu domínio já foi registrado, a taxa de
+              registro não é reembolsável. Essa condição está prevista em nossos
+              Termos de Uso, enviados automaticamente ao seu e-mail no momento
+              da criação do site.<br /><br />
+              O trecho específico dos termos diz o seguinte:<br />"Será feito o
+              reembolso de todos os valores eventualmente pagos pelo Usuário,
+              com exceção da taxa de registro de domínio, por não se tratar de
+              um serviço cancelável pelos órgãos registradores."<br /><br />
+              Você pode consultar os Termos de Uso completos neste link: <br />
+              👉
+              <code
+                ><a
+                  href="https://2task.com.br/novoapp/Manuais/guiasC2TI.xhtml?faces-redirect=true&includeViewParams=true&prm=TRmxgyUcIaTSEehmNm32NQ=="
+                  style="color: #e4e4e4"
+                  >Termos de Uso</a
+                ></code
+              ><br /><br />
+              Se precisar de qualquer suporte adicional ou decidir retomar
+              nossos serviços futuramente, estaremos sempre à disposição.
+            </p>
+          </div>
 
-              <h2>Cancelamento e Reembolso</h2>
-                <!-- <input type="text" value="?cache=clear" readonly> -->
-                  <div class="message-display">
-                    <span class="tagName">Cancelamento</span><br>
-                    <p>
-                      Olá! Tudo bem?<br><br>Conforme solicitado, o cancelamento foi realizado com sucesso.<br><br>Se precisar de qualquer suporte adicional ou decidir retomar nossos serviços futuramente, estaremos sempre à disposição.
-                    </p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Entender o motivo</span><br>
-                    <p>
-                      Olá, tudo bem?<br><br>Recebemos sua solicitação de cancelamento e já estamos processando o pedido.<br><br>Caso tenha sido por algum problema ou insatisfação, gostaríamos de entender melhor para que possamos melhorar nossos serviços.
-                    </p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Cancelamento e estorno realizados</span><br>
-                    <p>
-                      Olá! Tudo bem?<br><br>
-                    Conforme solicitado, o cancelamento e o estorno foram realizados com sucesso.<br>Em anexo, encaminhamos o comprovante de reembolso para sua conferência.<br><br>Gostaríamos apenas de reforçar que, como o seu domínio já foi registrado, a taxa de registro não é reembolsável. Essa condição está prevista em nossos Termos de Uso, enviados automaticamente ao seu e-mail no momento da criação do site.<br><br>
-                    O trecho específico dos termos diz o seguinte:<br>"Será feito o reembolso de todos os valores eventualmente pagos pelo Usuário, com exceção da taxa de registro de domínio, por não se tratar de um serviço cancelável pelos órgãos registradores."<br><br>
-                    Você pode consultar os Termos de Uso completos neste link: <br>
-                    👉 <code><a href="https://2task.com.br/novoapp/Manuais/guiasC2TI.xhtml?faces-redirect=true&includeViewParams=true&prm=TRmxgyUcIaTSEehmNm32NQ==" style="color: #E4E4E4;">Termos de Uso</a></code><br><br>
-                    Se precisar de qualquer suporte adicional ou decidir retomar nossos serviços futuramente, estaremos sempre à disposição.
-                    </p>
-                  </div>
+          <div class="message-display">
+            <span class="tagName"
+              >Envio das informações de cancelamento e estorno</span
+            ><br />
+            <p>
+              Olá, tudo bom?<br />
+              Esse cliente deseja cancelar sua contratação.<br /><br />
+              - Domínio: <br />
+              - O que é para ser feito: <br />
+              - Motivo do cancelamento: <br />
+              - Se tiver reembolso:
+            </p>
+          </div>
+        </div>
 
-                  <div class="message-display">
-                    <span class="tagName">Envio das informações de cancelamento e estorno</span><br>
-                    <p>
-                      Olá, tudo bom?<br>
-                    Esse cliente deseja cancelar sua contratação.<br><br>
-                    - Domínio: <br>
-                    - O que é para ser feito: <br>
-                    - Motivo do cancelamento: <br>
-                    - Se tiver reembolso:
-                    </p>
-                  </div>
-            </div>
+        <div id="content-araea-do-cliente" class="code-content">
+          <h2>Área do Cliente</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <div class="message-display">
+            <span class="tagName">Pré envio</span><br />
+            <p>
+              Estarei te encaminhando os dados de acesso à nossa área do
+              cliente, assim você poderá realizar a alteração dos e-mails
+              diretamente por lá.
+            </p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Pós envio</span><br />
+            <p>
+              Os dados de acesso à área do cliente serão enviados para o e-mail
+              que está cadastrado em sua contratação. <br />(email_do_cliente)
+            </p>
+          </div>
+        </div>
 
-            <div id="content-araea-do-cliente" class="code-content">
-              <h2>Área do Cliente</h2>
-                <!-- <input type="text" value="?cache=clear" readonly> -->
-                  <div class="message-display">
-                    <span class="tagName">Pré envio</span><br>
-                    <p>
-                      Estarei te encaminhando os dados de acesso à nossa área do cliente, assim você poderá realizar a alteração dos e-mails diretamente por lá.
-                    </p>
-                  </div>
-                  <div class="message-display">
-                    <span class="tagName">Pós envio</span><br>
-                     <p>
-                      Os dados de acesso à área do cliente serão enviados para o e-mail que está cadastrado em sua contratação. <br>(email_do_cliente)
-                     </p>
-                  </div>
-            </div>
-
-            <div id="content-outro" class="code-content">
-              <h2>Outros</h2>
-                <div class="message-display">
-                  <span class="tagName">Problema resolvido (Cache)</span><br>
-                  <p>
-                    O problema que estava causando a tela em branco no seu site já foi resolvido.<br>
-                  Pedimos que atualize a página (pode usar Ctrl + F5) e verifique se está tudo funcionando corretamente agora.
-                  </p>
-                </div>
-                <div class="message-display">
-                  <span class="tagName">Link de reativação</span><br>
-                  <p>Segue link de reativação - :</p>
-                </div>
-                <div class="message-display">
-                  <span class="tagName">Link de pagamento</span><br>
-                 <p>Segue link de pagamento, referente ao Registro de domínio:</p>
-                </div>
-                <div class="message-display">
-                  <span class="tagName">Apontamento</span><br>
-                 <p>
-                  Caso preferir podemos realizar o apontamento para o senhor, para isso vamos precisar dos dados de acesso da  plataforma que o domínio foi contratado.<br>
-                  No caso seria o usuário e a senha
-                </p>
-                </div>
-                <div class="message-display">
-                  <span class="tagName">Usar formato de imagem</span><br>
-                 <p>Em relação as imagens você pode carregá-las no formato .webp
-                 </p>
-                </div>
-                <div class="message-display">
-                  <span class="tagName">Pagamento no site</span><br>
-                 <p>
-                  Infelizmente, nossa plataforma não oferece integração completa com sistemas de pagamento, como carrinho de compras, checkout com cartão, Pix ou boleto diretamente no site.<br>
-                  É possível utilizar soluções alternativas, como a inclusão de botões de compra ou links de pagamento externos (ex: Mercado Pago, PagSeguro, links do WhatsApp, entre outros), que direcionam seus clientes para a finalização da compra fora do site.
-                 </p>
-                </div>
-                <div class="message-display">
-                  <span class="tagName">Criação de conteúdo do site</span><br>
-                 <p>
-                  Nós não desenvolvemos as imagens ou os textos para o site.<br>
-                  A criação do conteúdo (visual e textual) fica em sua responsabilidade.
-                 </p>
-                </div>
-            </div>
-        </main>
+        <div id="content-outro" class="code-content">
+          <h2>Outros</h2>
+          <div class="message-display">
+            <span class="tagName">Problema resolvido (Cache)</span><br />
+            <p>
+              O problema que estava causando a tela em branco no seu site já foi
+              resolvido.<br />
+              Pedimos que atualize a página (pode usar Ctrl + F5) e verifique se
+              está tudo funcionando corretamente agora.
+            </p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Link de reativação</span><br />
+            <p>Segue link de reativação - :</p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Link de pagamento</span><br />
+            <p>Segue link de pagamento, referente ao Registro de domínio:</p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Apontamento</span><br />
+            <p>
+              Caso preferir podemos realizar o apontamento para o senhor, para
+              isso vamos precisar dos dados de acesso da plataforma que o
+              domínio foi contratado.<br />
+              No caso seria o usuário e a senha
+            </p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Usar formato de imagem</span><br />
+            <p>Em relação as imagens você pode carregá-las no formato .webp</p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Pagamento no site</span><br />
+            <p>
+              Infelizmente, nossa plataforma não oferece integração completa com
+              sistemas de pagamento, como carrinho de compras, checkout com
+              cartão, Pix ou boleto diretamente no site.<br />
+              É possível utilizar soluções alternativas, como a inclusão de
+              botões de compra ou links de pagamento externos (ex: Mercado Pago,
+              PagSeguro, links do WhatsApp, entre outros), que direcionam seus
+              clientes para a finalização da compra fora do site.
+            </p>
+          </div>
+          <div class="message-display">
+            <span class="tagName">Criação de conteúdo do site</span><br />
+            <p>
+              Nós não desenvolvemos as imagens ou os textos para o site.<br />
+              A criação do conteúdo (visual e textual) fica em sua
+              responsabilidade.
+            </p>
+          </div>
+        </div>
+      </main>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script>
-      $(document).ready(function(){
-    $('.menu-button').on('click', function(){
-        $('.menu-button').removeClass('active');
+      $(document).ready(function () {
+        $(".menu-button").on("click", function () {
+          $(".menu-button").removeClass("active");
 
-        $(this).addClass('active');
-        
-        $('.code-content').removeClass('active');
-        
-        var targetContent = $(this).data('target');
+          $(this).addClass("active");
 
-        $(targetContent).addClass('active');
-    });
-});
+          $(".code-content").removeClass("active");
 
-// Espera o DOM carregar
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerBtn = document.querySelector('.hamburger-menu');
-    const sidebar = document.querySelector('.sidebar');
+          var targetContent = $(this).data("target");
 
-    if (hamburgerBtn && sidebar) {
-        // Adiciona um evento de clique ao botão
-        hamburgerBtn.addEventListener('click', () => {
-            // Alterna a classe 'open' na barra lateral
-            sidebar.classList.toggle('open');
+          $(targetContent).addClass("active");
         });
-    }
-})
+      });
 
+      // Espera o DOM carregar
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerBtn = document.querySelector(".hamburger-menu");
+        const sidebar = document.querySelector(".sidebar");
+
+        if (hamburgerBtn && sidebar) {
+          // Adiciona um evento de clique ao botão
+          hamburgerBtn.addEventListener("click", () => {
+            // Alterna a classe 'open' na barra lateral
+            sidebar.classList.toggle("open");
+          });
+        }
+      });
     </script>
-</body>
+  </body>
 </html>
