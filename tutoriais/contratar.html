@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="/styles/global.css" />
+    <link rel="stylesheet" href="/styles/mainPage.css" />
+    <link rel="stylesheet" href="../styles/responsividade.css">
+    <title>Como Contratar</title>
+  </head>
+  <body>
+    <div class="container">
+      <main class="main-content" style="padding: 15px 35px;">
+        <div id="content-passo1" class="code-content active" style="display: flex; flex-direction: column; align-items: center; justify-content: center;">
+          <h2>Como contratar um site</h2>
+          <!-- <input type="text" value="?cache=clear" readonly> -->
+          <div class="message-display">
+            <i class="fa-solid fa-angle-right"></i> 1 - Para realizar a contratação de um plano, basta clicar em "Contratar"<br />
+            <img
+            class="imgTuto"
+              src="../src/imgTuto/contratar/01.png"
+              alt=""
+              style="border-radius: 8px; margin-top: 15px;"
+            />
+          </div>
+          <div class="message-display">
+            <i class="fa-solid fa-angle-right"></i> 2 - Após, escolha um plano de sua preferencia<br />
+            <img
+            class="imgTuto"
+              src="../src/imgTuto/contratar/02.png"
+              alt=""
+              style="border-radius: 8px; margin-top: 15px;"
+            />
+          </div>
+          <div class="message-display">
+            <i class="fa-solid fa-angle-right"></i> 3 - Após isso, no formulário de contratação, caso tenha um domínio use a opção de "Usar um domínio que já tenho"<br />
+            <img
+            class="imgTuto"
+              src="../src/imgTuto/contratar/03.png"
+              alt=""
+              style="border-radius: 8px; margin-top: 15px;"
+            />
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-button").on("click", function () {
+          $(".menu-button").removeClass("active");
+
+          $(this).addClass("active");
+
+          $(".code-content").removeClass("active");
+
+          var targetContent = $(this).data("target");
+
+          $(targetContent).addClass("active");
+        });
+      });
+    </script>
+  </body>
+</html>
+
