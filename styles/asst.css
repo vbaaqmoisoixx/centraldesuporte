@@ -50,6 +50,13 @@
     background-color: #03624c0e;
 }
 
+.copyBtn:disabled {
+    background-color: transparent;
+    cursor: not-allowed;
+    opacity: 0.3;
+    color: var(--cor-terceira);
+}
+
 .copyBtn:hover {
     color: var(--accent-color);
     background-color: #30e0a513;
@@ -82,3 +89,4 @@
     visibility: visible;
     opacity: 1;
   }
+
