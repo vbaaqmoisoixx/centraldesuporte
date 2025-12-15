@@ -475,7 +475,7 @@
               </template>
             </div>
             <!-- Carousel Swiper -->
-             <div class="imgAsst">
+            <div class="imgAsst">
               <div class="imgPreview">
                 <img src="../src/assetsImgs/carrossel.png" alt="" />
               </div>
@@ -688,6 +688,287 @@
                     },
                   },
                 });
+              </template>
+            </div>
+            <!-- Modal -->
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/modal.png" alt="" />
+              </div>
+              <p>Modal</p>
+
+              <div class="copyBtns">
+                <button class="copyBtn" data-target="modalTplHtml">Copiar HTML</button>
+                <button class="copyBtn" data-target="modalTplCss" data-type="css">Copiar CSS</button>
+                <button class="copyBtn" data-target="modalTplJs" data-type="js">Copiar JS</button>
+              </div>
+
+              <template id="modalTplHtml">
+                <div id="modal" class="modal">
+                  <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <h2 id="modalTitle"></h2>
+                    <p id="modalDesc"></p>
+                  </div>
+                </div>
+
+                <div class="card">
+                  <h3>Título do Card</h3>
+                  <p>Descrição breve do conteúdo do cardssssss.</p>
+                  <button class="openModal">Ver mais</button>
+                </div>
+              </template>
+
+              <template id="modalTplCss">
+                /* Esconde o botão por padrão (desktop) */
+                .openModal {
+                  display: none;
+                }
+                
+                /* Mostra só no mobile */
+                @media (max-width: 768px) {
+                  .openModal {
+                    display: inline-block;
+                  }
+                }
+                
+                /* Fundo escuro */
+                .modal {
+                  display: none; 
+                  position: fixed;
+                  z-index: 9999;
+                  left: 0;
+                  top: 0;
+                  width: 100%;
+                  height: 100%;
+                  background: rgba(0,0,0,0.6);
+                }
+                
+                /* Caixa do modal */
+                .modal-content {
+                  background: #fff;
+                  padding: 20px;
+                  margin: 10% auto;
+                  width: 90%;
+                  max-width: 400px;
+                  border-radius: 8px;
+                  animation: fadeIn .3s;
+                }
+                
+                /* Botão fechar */
+                .close {
+                  float: right;
+                  font-size: 25px;
+                  cursor: pointer;
+                }
+                
+                @keyframes fadeIn {
+                  from { opacity: 0; transform: translateY(-20px); }
+                  to { opacity: 1; transform: translateY(0); }
+                }
+              </template>
+              <template id="modalTplJs">
+                $(document).ready(function () {
+                  $(".openModal").click(function () {
+                    let card = $(this).closest(".card");
+
+                    let titulo = card.find("h3").text();   // pega o h3
+                    let descricao = card.find("p").text(); // pega o p
+
+                    $("#modalTitle").text(titulo);
+                    $("#modalDesc").text(descricao);
+                    
+                    $("#modal").fadeIn(200);
+                  });
+                  
+                  $(".close").click(function () {
+                    $("#modal").fadeOut(200);
+                  });
+
+                  $("#modal").click(function (e) {
+                    if (e.target.id === "modal") $("#modal").fadeOut(200);
+                  });
+                });
+              </template>
+            </div>
+            <!-- Donwload APP -->
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/ctaDonw.png" alt="" />
+              </div>
+              <p>Donwload APP</p>
+
+              <div class="copyBtns">
+                <button class="copyBtn" data-target="donwloadAppTplHtml">Copiar HTML</button>
+                <button class="copyBtn" data-target="donwloadAppTplCss" data-type="css">Copiar CSS</button>
+                <button class="copyBtn" data-target="donwloadAppTplJs" data-type="js" disabled>Copiar JS</button>
+              </div>
+
+              <template id="donwloadAppTplHtml">
+                <div class="ctaDonw">
+                  <div class="infos">
+                    <p class="infoTitle">
+                      O MoveNow já está disponível para Android e iOS
+                    </p>
+                    <p class="infoAdd">
+                      Seu motorista está a minutos de você. Com o RideMate, solicite uma
+                      carona segura, rápida e confiável com apenas alguns toques. Viagens
+                      tranquilas, do ponto A ao ponto B, sem complicações.
+                    </p>
+                    
+                    <div class="btnsDonw">
+                      <a href="#">
+                        <i class="fa-brands fa-google-play"></i> Google Play
+                      </a>
+                      <a href="#">
+                        <i class="fa-brands fa-apple"></i> App Store
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </template>
+
+              <template id="donwloadAppTplCss">
+                /* ======= VARIÁVEIS ======= */
+                :root {
+                  --bg-card: #00c040;
+                  --cor-texto: #f1f1f1;
+                  --btn-cor: #f1f1f1;
+                  --btn-texto: #1a1a1a;
+                }
+                
+                /* ======= CONTAINER CTA ======= */
+                .ctaDonw {
+                  display: flex;
+                  justify-content: center;
+                  width: 115rem;
+                  padding: 75px;
+                  background-color: var(--bg-card);
+                  color: var(--cor-texto);
+                  text-align: center;
+                  border-radius: 58px;
+                }
+
+                /* ======= INFORMAÇÕES ======= */
+                .infos {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  padding: 20px;
+                }
+                
+                .infoTitle {
+                  margin-bottom: 30px;
+                  font-size: 3.5rem;
+                  font-weight: bold;
+                }
+                
+                .infoAdd {
+                  width: 80%;
+                  margin-bottom: 40px;
+                  text-align: center;
+                  font-size: 1.8rem;
+                }
+                
+                /* ======= BOTÕES ======= */
+                .btnsDonw {
+                  display: flex;
+                  gap: 15px;
+                  margin-top: 50px;
+                }
+
+                .btnsDonw a {
+                  display: flex;
+                  align-items: center;
+                  padding: 15px 35px;
+                  background-color: var(--btn-cor);
+                  color: var(--btn-texto);
+                  text-decoration: none;
+                  font-size: 1.7rem;
+                  border-radius: 33px;
+                  border: 1px solid transparent;
+                  transition: background-color 0.5s, color 0.5s;
+                }
+                
+                .btnsDonw a img {
+                  height: 30px;
+                  margin-right: 10px;
+                }
+
+                /* ======= HOVER ======= */
+                .btnsDonw a:hover {
+                  background-color: transparent;
+                  color: var(--btn-cor);
+                  border-color: var(--btn-cor);
+                }
+                
+                .btnsDonw a:hover img {
+                  color: var(--btn-cor);
+                }
+
+                /* ======= TABLET ======= */
+                @media (max-width: 1024px) {
+                  .ctaDonw {
+                    padding: 50px;
+                    border-radius: 40px;
+                  }
+
+                  .infoTitle {
+                    font-size: 2.8rem;
+                  }
+                  
+                  .infoAdd {
+                    width: 90%;
+                    font-size: 1.6rem;
+                  }
+
+                  .infos {
+                    padding: 0;
+                  }
+                }
+                
+                /* ======= MOBILE ======= */
+                @media (max-width: 768px) {
+                  .ctaDonw {
+                    padding: 40px 20px;
+                    border-radius: 30px;
+                  }
+
+                  .infoTitle {
+                    font-size: 2.2rem;
+                    margin-bottom: 20px;
+                  }
+
+                  .infoAdd {
+                    width: 100%;
+                    font-size: 1.4rem;
+                    margin-bottom: 30px;
+                  }
+
+                  .btnsDonw {
+                    flex-direction: column;
+                    width: 100%;
+                    gap: 12px;
+                  }
+                  
+                  .btnsDonw a {
+                    justify-content: center;
+                    width: 100%;
+                    font-size: 1.4rem;
+                    padding: 14px;
+                  }
+
+                  .btnsDonw a img {
+                    height: 24px;
+                  }
+
+                  .infos {
+                    padding: 0;
+                  }
+                }
+              </template>
+              <template id="donwloadAppTplJs">
               </template>
             </div>
           </section>
