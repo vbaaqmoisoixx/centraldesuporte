@@ -450,27 +450,46 @@
               </div>
 
               <template id="faixaTplHtml">
-                <marquee onmouseover="this.stop();" onmouseout="this.start();" behavior="scroll" direction="right" scrollamount="15"  class="faixa">
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                  | This is a scrolling text example using the marquee tag.
-                </marquee>
+                <div class="faixa">
+                  <div class="texto">
+                    🔔 Promoção especial! Passe o mouse para pausar o texto.
+                    🔔 Promoção especial! Passe o mouse para pausar o texto.
+                    🔔 Promoção especial! Passe o mouse para pausar o texto.
+                    🔔 Promoção especial! Passe o mouse para pausar o texto.
+                    🔔 Promoção especial! Passe o mouse para pausar o texto.
+                    🔔 Promoção especial! Passe o mouse para pausar o texto. 
+                  </div>
+                </div>
               </template>
               <template id="faixaTplCss">
                 .faixa {
+                  width: 100%;
+                  overflow: hidden;
+                  padding: 18px 0;
+                  position: relative;
                   background-color: rgb(61, 0, 121);
                   color: white;
-                  font-size: 2rem;
-                  padding: 1.7rem;
-                  width: 100%;
-                  text-align: center;
+                }
+                
+                .texto {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                  white-space: nowrap;
+                  color: #fff;
+                  font-size: 41px;
+                  padding-left: 100%;
+                  animation: mover 5s linear infinite;
+                }
+                
+                /* Pausa ao passar o mouse */
+                .faixa:hover .texto {
+                  animation-play-state: paused;
+                }
+                
+                @keyframes mover {
+                  from {transform: translateX(-100%);}
+                  to {transform: translateX(0);}
                 }
               </template>
             </div>
@@ -479,7 +498,7 @@
               <div class="imgPreview">
                 <img src="../src/assetsImgs/carrossel.png" alt="" />
               </div>
-              <p>Carrossel- Swiper</p>
+              <p>Carrossel - Swiper</p>
 
               <div class="copyBtns">
                 <button class="copyBtn" data-target="carrosselSwiperTplHtml">Copiar HTML</button>
