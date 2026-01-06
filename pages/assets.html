@@ -1013,6 +1013,7 @@
                         <div class="cardVideo">
 
                         </div>
+
                       </div>
                     </div>
                     
@@ -1054,7 +1055,7 @@
                   transition: transform 0.4s ease;
                 }
                 
-                .card {
+                .cardVideo {
                   margin: 0 10px;
                   border-radius: 8px;
                   display: flex;
@@ -1062,7 +1063,7 @@
                   justify-content: center;
                 }
                 
-                .card iframe {
+                .cardVideo iframe {
                   width: 600px;
                   height: 350px;
                 }
@@ -1102,11 +1103,11 @@
                 
                 /* Responsivo */
                 @media (max-width: 992px) {
-                  .card {
+                  .cardVideo {
                     min-width: 850px;
                   }
 
-                  .card iframe {
+                  .cardVideo iframe {
                     width: 880px;
                     height: 180px;
                   }
@@ -1116,8 +1117,8 @@
               <template id="carrosselVideosTplJs">
                 $(document).ready(function () {
                   let currentIndex = 0;
-                  const cardWidth = $(".card").outerWidth(true);
-                  const totalCards = $(".card").length;
+                  const cardWidth = $(".cardVideo").outerWidth(true);
+                  const totalCards = $(".cardVideo").length;
                   const visibleCards = Math.floor(
                     $(".carousel-viewport").width() / cardWidth
                   );
