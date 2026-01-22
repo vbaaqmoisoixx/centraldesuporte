@@ -95,6 +95,28 @@
                       $("jdiv").hide();
                     },1000);</p>
                   </div>
+                  <div class="message-display">
+                    <span class="tagName">Mensagem com link Whatsapp</span><br>
+                    <p>
+                      $(document).ready(function() { <br>
+                        // Para cada botão de WhatsApp<br>
+                        $('#ID_DO_ELEMENTO .btgrid .row .col-12 .ia-botoes-001 a').on('click', function(e) { <br>
+                          e.preventDefault();<br><br>
+                          
+                          // pega o título do card pai<br>
+                          var tituloServico = $(this).closest('#ID_DO_ELEMENTO .btgrid .row .col-12').find('.ia-titulo-006').text().trim();
+                          <br><br>
+                          // Formata a mensagem<br>
+                          var mensagem = "Olá! Gostaria de informações sobre: " + tituloServico + "";<br>
+                          var mensagemCodificada = encodeURIComponent(mensagem);<br>
+                          var telefone = telefone1;<br><br>
+                          
+                          // Abre o WhatsApp<br>
+                          window.open('https://wa.me/' + telefone + '?text=' + mensagemCodificada, '_blank');<br>
+                        });<br>
+                      });
+                    </p>
+                  </div>
 
             </div>
         </main>
