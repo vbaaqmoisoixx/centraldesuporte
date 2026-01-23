@@ -1934,7 +1934,162 @@
               </template>
             </div>
 
-            
+             <!-- Apresentação institucional -->
+            <div class="imgAsst">
+              <div class="imgPreview">
+                <img src="../src/assetsImgs/Valorunico.png" alt="" />
+              </div>
+              <p style="font-size: 24px;">Valor Uníco</p>
+
+              <div class="copyBtns">
+                <button class="copyBtn" data-target="valorUnicoTplHtml" data-type="html">Copiar HTML</button>
+                <button class="copyBtn" data-target="valorUnicoTplCss" data-type="css">Copiar CSS</button>
+                <button class="copyBtn" data-target="valorUnicoTplJs" data-type="js" disabled>Copiar JS</button>
+              </div>
+
+              <template id="valorUnicoTplHtml">
+                <section class="precoUnico">
+                  <div class="precoCard">
+                    <div class="ctaInfo">
+                      <p class="cta">
+                        Hoje você terá <strong>acesso a todo esse conteúdo</strong> pelo
+                        <span>valor promocional</span>
+                      </p>
+                    </div>
+                    <div class="valor">
+                      <p class="valorAntigo">De R$89,90</p>
+                      <p class="valorAtual">R$39,90</p>
+                      <div class="botao">
+                        <a href="#" class="botaoConpra">Comprar agora
+                          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"> <path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </template>
+
+              <template id="valorUnicoTplCss">
+                :root{
+                  --color-text-cta: #5b5b5b;
+                  --color-text-cta-secundary: #a5a5a5;
+                  --background-cta: #242424;
+                  --paading-cta: 0 40px;
+                  --font-cta: 1.8rem;
+                  --gradient: linear-gradient(54deg,rgb(141, 0, 242) 0%,rgb(154, 3, 195) 76%);
+                  --font-valor-antigo: 1.5rem;
+                  --valor-color: #671cc3;
+                  --span-color: #fff;
+                  --text-opacity: 0.4;
+                }
+
+                .precoCard {
+                  display: flex;
+                  overflow: hidden;
+                  border-radius: 4px;
+                }
+
+                .ctaInfo {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  width: 380px;
+                  height: 390px;
+                  padding: 30px;
+                  font-size: var(--font-cta);
+                  color: var(--color-text-cta);
+                  background-color: var(--background-cta);
+                }
+                
+                .cta{
+                  padding: var(--paading-cta);
+                  margin: 0 auto;
+                }
+
+                .cta strong {
+                  color: var(--color-text-cta-secundary);
+                }
+
+                .cta span {
+                  color: var(--span-color);
+                  background: var(--valor-color);
+                  background-image: var(--gradient);
+                  -webkit-background-clip: text;
+                  background-clip: text;
+                  -webkit-text-fill-color: transparent;
+                  text-fill-color: transparent;
+                  font-weight: 700;
+                }
+
+                .valor {
+                  display: flex;
+                  align-items: center;
+                  flex-direction: column;
+                  justify-content: center;
+                  width: 380px;
+                  background-color: #efefef;
+                }
+                
+                .valorAntigo {
+                  font-size: 1.5rem;
+                  color: var(--valor-color);
+                  text-decoration: line-through;
+                  margin-bottom: 20px;
+                  opacity: 0.4;
+                }
+
+                .valorAtual {
+                  font-size: 3rem;
+                  color: #292929;
+                  font-weight: 800;
+                  margin-bottom: 10px;
+                }
+
+                .botaoConpra {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+                  padding: 10px 35px;
+                  color: var(--span-color);
+                  text-decoration: none;
+                  font-size: 1.2rem;
+                  border-radius: 8px;
+                  transition: background-color 0.3s ease;
+                  background: #3819e5;
+                  background-image: var(--gradient);
+                }
+                
+                .botaoConpra svg {
+                  width: 20px;
+                  height: 20px;
+                  margin-left: 5px;
+                  transition: transform 0.3s ease;
+                }
+
+                .botaoConpra:hover svg {
+                  transform: translateX(5px);
+                }
+
+                @media (max-width: 992px) {
+                  .precoCard {
+                    flex-direction: column;
+                  }
+
+                  .valor {
+                    height: 265px;
+                  }
+
+                  .precoUnico{
+                    padding: 0 40px; 
+                  }
+                }
+              </template>
+
+              <template id="valorUnicoTplJs">
+              </template>
+            </div>
+
           </section>
         </div>
 
