@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+      integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="../styles/global.css" />
+    <link rel="stylesheet" href="/styles/mainPage.css" />
+    <link rel="stylesheet" href="../styles/sidebar.css" />
+    <link rel="stylesheet" href="../styles/responsividade.css" />
+    <title>Passo a passo</title>
+  </head>
+  <body>
+    <header class="main-header" id="main-header">
+      <button class="hamburger-menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </header>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="sidebar-header">
+          <h1>Passo a passo</h1>
+          <p>Guias de configuirações</p>
+          <hr />
+        </div>
+        <nav class="menu">
+          <button class="menu-button active" data-target="#content-TagGtm">
+            Criar uma Tag do GTM <i class="fa-solid fa-angle-right"></i>
+          </button>
+          <button class="menu-button" data-target="#content-Acionador">
+            Acionador GTM <i class="fa-solid fa-angle-right"></i>
+          </button>
+
+          <div class="dropdown" style="border-top: 1px solid #02df8338; padding-top: 8px">
+            <button class="dropbtn menu-button">
+              Acesso Rápido <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="dropdown-content">
+              <a href="/pages/comandos.html">Comandos
+                <svg style="margin-left: 5px" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854"stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="/pages/tutoriais.html">Tutoriais
+                <svg style="margin-left: 5px" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="/pages/dns.html">Apontamento DNS
+                <svg style="margin-left: 5px" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="/pages/links.html">Links
+                <svg style="margin-left: 5px" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+              <a href="/pages/assets.html">Templates
+                <svg style="margin-left: 5px" width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"> <path d="M6.34277 17.6568L16.9494 7.05025M17.6565 13.4142L17.6565 6.34314H10.5854" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          </div>
+        </nav>
+        <div class="home">
+          <hr />
+          <a class="voltar" href="../index.html"><i class="fa-solid fa-chevron-left"></i> Voltar</a>
+        </div>
+      </aside>
+      <main class="main-content">
+        <div id="content-TagGtm" class="code-content active">
+          <h2>Como gerar o código da tag do Google Ads pelo GTM </h2>
+          <div class="message-display">
+            <span class="tagName">Tag GTM</span><br />
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">
+              1. Acesse sua Conta do Google Tag Manager
+            </p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Entre no site: https://tagmanager.google.com.</li>
+              <li>- Faça login com sua conta Google.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">2. Escolha o Contêiner do Seu Site</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Na lista de contêineres, clique no que corresponde ao seu site.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">3. Criar uma Nova Tag</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- No menu lateral esquerdo, clique em "Tags".</li>
+              <li>- Depois clique no botão "Nova".</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">4. Configurar a Tag</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Clique em "Configuração da Tag".</li>
+              <li>- Selecione "Google Ads – Conversão" (ou “Google Ads Conversion Tracking”).</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">5. Inserir os Dados da Conversão</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Preencha: ID de conversão, Rótulo de conversão (Esses dados geralmente são fornecidos pelo Google Ads na hora de criar uma conversão).</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">6. Definir o Acionador</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Clique em “Acionamento”.</li>
+              <li>- Escolha quando a conversão deve disparar, por exemplo: All Pages (Todas as páginas) ou 
+                um acionador específico (ex.: envio de formulário,<br> clique em botão, página de obrigado etc.)
+              </li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">7. Salvar</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Clique em “Salvar” no canto superior direito.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">8. Enviar as Alterações</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- No topo da tela, clique em “Enviar”.</li>
+              <li>- Dê um nome para a publicação (ex.: “Tag Google Ads adicionada”).</li>
+              <li>- Clique em “Publicar”.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">9. Pegar o Código do GTM</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>Se você precisa instalar o GTM no seu site ou enviar o código:</li>
+              <li>- No canto superior direito, clique no ID do contêiner (ex.: GTM-XXXXXXX).</li>
+              <li>- Será exibido o código para inserir no site: Um código para o 
+                &lt;head&gt;...&lt;/head&gt; e outro para o &lt;body&gt;...&lt;/body&gt;
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div id="content-Acionador" class="code-content">
+          <h2>Configurar acionador de clique no botão GTM</h2>
+          <div class="message-display">
+            <span class="tagName">Acionador GTM</span><br />
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">1. Acesse o Google Tag Manager</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Entre em: https://tagmanager.google.com/</li>
+              <li>- Selecione o container do seu site.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">2. Ative as variáveis de clique</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- No menu lateral, clique em Variáveis.</li>
+              <li>- Em Variáveis integradas, clique em Configurar.</li>
+              <li>- Marque as opções:  Click Element, Click Classes, Click ID, Click Text, Click URL.<br>
+                Clique em Salvar.
+              </li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">3. Crie o acionador (Trigger)</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Vá em Acionadores.</li>
+              <li>- Dê um nome ao acionador, por exemplo: "Clique no Botão WhatsApp (.btnZap)"</li>
+              <li>- Clique em Configuração do acionador.</li>
+              <li>- Selecione Clique – Todos os elementos.</li>
+              <li>- Marque a opção: Alguns cliques.</li>
+              <li>- Configure a condição: <br>
+                Selecione: Click Classes; <br>
+                Condição: contém; <br>
+                Valor: btnZap;<br>
+                Clique em Salvar.</li>
+            </ul>
+
+            <p style="margin-bottom: 10px; font-weight: 600; font-size: 1.4rem;">4. Vincule o acionador à sua tag</p>
+            <ul style="display:flex; flex-direction: column; list-style: none; gap: 4px; margin-bottom: 10px; margin-left: 35px;">
+              <li>- Vá em Tags.</li>
+              <li>- Abra a tag que deseja disparar (por exemplo: GA4, Google Ads, etc).</li>
+              <li>- Em Acionamento, selecione o acionador que você acabou de criar.</li>
+              <li>- Salve a tag.</li>
+            </ul>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function () {
+        $(".menu-button").on("click", function () {
+          $(".menu-button").removeClass("active");
+
+          $(this).addClass("active");
+
+          $(".code-content").removeClass("active");
+
+          var targetContent = $(this).data("target");
+
+          $(targetContent).addClass("active");
+        });
+      });
+
+      // Espera o DOM carregar
+      document.addEventListener("DOMContentLoaded", () => {
+        const hamburgerBtn = document.querySelector(".hamburger-menu");
+        const sidebar = document.querySelector(".sidebar");
+
+        if (hamburgerBtn && sidebar) {
+          // Adiciona um evento de clique ao botão
+          hamburgerBtn.addEventListener("click", () => {
+            // Alterna a classe 'open' na barra lateral
+            sidebar.classList.toggle("open");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
