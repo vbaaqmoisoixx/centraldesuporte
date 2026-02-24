@@ -1695,39 +1695,34 @@
                 }
               </template>
 
-              <template id="misaoTplJs">
-                const buttons = document.querySelectorAll(".btn-valores");
-                const btnActive = document.querySelectorAll(".btn-icon");
-                const cards = document.querySelectorAll(".cards-valores > div");
+              <template id="misaoTplJs"> 
+                $(document).ready(function() {
+                  const $buttons = $(".btn-valores");
+                  const $btnIcons = $(".btn-icon");
+                  const $cards = $(".cards-valores > div");
 
-                // Adicionar evento de clique aos botões
-                buttons.forEach((button, index) => {
-                  button.addEventListener("click", () => {
-                    document
-                      .querySelector(".btn-valores.active")
-                      .classList.remove("active");
-                    button.classList.add("active");
+                  // Função para ativar um item específico
+                  function activateItem(index) {
+                      // Remove classes ativas de todos os elementos
+                      $buttons.removeClass("active");
+                      $btnIcons.removeClass("btn-icon-active");
+                      $cards.hide();
 
-                    btnActive[index].classList.add("btn-icon-active");
-                    btnActive.forEach((icon, iconIndex) => {
-                      if (iconIndex !== index) {
-                        icon.classList.remove("btn-icon-active");
-                      }
-                    });
-
-                    document.querySelector(
-                      '.cards-valores > div:not([style*="display: none"])'
-                    ).style.display = "none";
-                    cards[index].style.display = "block";
-                  });
-                });
-
-                // Inicialmente, exibir apenas o primeiro card
-                cards.forEach((card, index) => {
-                  if (index !== 0) {
-                    card.style.display = "none";
+                      // Ativa elementos do índice específico
+                      $buttons.eq(index).addClass("active");
+                      $btnIcons.eq(index).addClass("btn-icon-active");
+                      $cards.eq(index).show();
                   }
-                });
+
+                  // Adicionar evento de clique aos botões
+                  $buttons.on("click", function() {
+                      const index = $buttons.index(this);
+                      activateItem(index);
+                  });
+
+                  // Inicialmente, exibir apenas o primeiro card
+                  activateItem(0);
+              });
               </template>
             </div>
 
@@ -1934,7 +1929,7 @@
               </template>
             </div>
 
-             <!-- Apresentação institucional -->
+             <!-- Valor unico -->
             <div class="imgAsst">
               <div class="imgPreview">
                 <img src="../src/assetsImgs/Valorunico.png" alt="" />
