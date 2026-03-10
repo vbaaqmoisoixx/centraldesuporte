@@ -25,8 +25,8 @@
                 <hr>
             </div>
             <nav class="menu">
-                <button class="menu-button active" data-target="#content-cache">Cache <i class="fa-solid fa-angle-right"></i></button>
-                <button class="menu-button" data-target="#content-codigos">Códigos <i class="fa-solid fa-angle-right"></i></button>
+                <!-- <button class="menu-button active" data-target="#content-cache">Cache <i class="fa-solid fa-angle-right"></i></button> -->
+                <button class="menu-button active" data-target="#content-codigos">Códigos <i class="fa-solid fa-angle-right"></i></button>
 
           <div class="dropdown" style="border-top: 1px solid #02df8338; padding-top: 8px;">
             <button class="dropbtn menu-button">
@@ -57,18 +57,21 @@
             </div>
         </aside>
         <main class="main-content">
-            <div id="content-cache" class="code-content active">
+            <!-- <div id="content-cache" class="code-content active">
               <h2>Cache</h2>
-                <!-- <input type="text" value="?cache=clear" readonly> -->
                   <div class="message-display">
                     <span class="tagName">Limpar cache</span><br>
                     <p>?cache=clear</p>
                   </div>
-            </div>
+            </div> -->
 
-            <div id="content-codigos" class="code-content">
+            <div id="content-codigos" class="code-content active">
               <h2>Códigos</h2>
-                <!-- <input type="text" value="?cache=clear" readonly> -->
+                <div class="message-display">
+                    <span class="tagName">Limpar cache</span><br>
+                    <p>?cache=clear</p>
+                  </div>
+
                   <div class="message-display">
                     <span class="tagName">Alterar link do Whatsapp</span><br>
                     <p>$(".btnZap > span").attr("onclick","window.open('https://api.whatsapp.com/send?phone=551199999999'), _blank");</p>

@@ -33,7 +33,7 @@
     background-position: center;
 }
 
-.copyBtns {
+.copyBtns:last-child {
     display: flex;
     gap: 10px;
     margin-top: 25px;

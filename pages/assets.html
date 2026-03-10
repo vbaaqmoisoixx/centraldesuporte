@@ -336,18 +336,21 @@
               <template id="animacaoTplCss">
                 .hidden {
                   opacity: 0;
-                  transition: 1s all;
-                  transform: translateY(10%);
-                }
+                  transition: 1s ease-in-out;
+                  transform: translateY(80%);
+                  transition-timing-function: cubic-bezier(0.354, 0.806, 0.172, 0.906);
+                } 
+
                 .show {
-                  opacity: 1;
-                  transition: 1s all;
-                  transform: translateY(0%);
+                    opacity: 1;
+                    transition: 1s ease-in-out;
+                    transform: translateY(0%);
+                    transition-timing-function: cubic-bezier(0.354, 0.806, 0.172, 0.906);
                 }
-                
-                .conteiner {
-                  transition-delay: 300ms;
-                }
+
+                  .container {
+                      transition-delay: 380ms;
+                  } 
               </template>
               <template id="animacaoTplJs">
                 const elements = document.querySelectorAll('.hidden');
@@ -2166,5 +2169,7 @@
         });
       });
     </script>
+
+    <a href="#">Get in touch</a>
   </body>
 </html>
